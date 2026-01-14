@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter-Calculator</title>
+    <link rel="shortcut icon" href="perimeterFav.png" type="image/x-icon">
+    <link rel="stylesheet" href="perimeter.css">
+    <script src="https://kit.fontawesome.com/b87b03660d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <main>
+        <h1><i class="fa-solid fa-heart"></i> Perimeter Calculator </h1>
+        <div class="inputDiv">
+            <input type="text" id="length" placeholder="Length (cm)">
+            <input type="text" id="breadth" placeholder="Breadth (cm)">
+        </div>
+        <button onclick="perimeterFunction()">Calculate Perimeter</button>
+        <div class="output">
+            <p id="paragraph"></p>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+   </main>
+</body>
+</html>
+<script>
+    let inputTagOne = document.getElementById('length')
+    let inputTagTwo = document.getElementById('breadth')
+    let pTag = document.getElementById('paragraph')
+
+    function perimeterFunction() {
+        let length = +inputTagOne.value.trim()
+        let breadth = +inputTagTwo.value.trim()
+        console.log(length , breadth);
+        let perimeter = 2 * (length + breadth)
+        console.log(perimeter); 
+        let finalSentence = `The perimeter of the rectangle with the length of ${length}cm and breadth of ${breadth}cm is ${perimeter}cm`
+        let paragraph = pTag.innerHTML = finalSentence
+        console.log(paragraph);
+    }
+    
+</script>
