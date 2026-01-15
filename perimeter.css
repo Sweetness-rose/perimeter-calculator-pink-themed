@@ -38,12 +38,12 @@ h1{
     justify-content: center;
 }
 input{
-    flex: 1;
     padding: 10px;
     border-radius: 8px;
     border: 2px solid #ffc1dc;
     outline: none;
     font-size: 14px;
+    width: 180px;
 } 
 input::placeholder{
     color: #d87aa6;
